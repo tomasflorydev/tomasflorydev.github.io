@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Tomas Flory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <link rel="stylesheet" href="./styles/style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#top" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>dev<span class="logo-bracket">/&gt;</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#bento">Inicio</a>
+        <a href="#projects">Proyectos</a>
+        <a href="#contact">Contacto</a>
+      </nav>
+      <div class="nav-actions">
+        <!-- Theme toggle -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema" title="Cambiar tema">
+          <span class="theme-icon theme-icon-dark"><i data-lucide="moon"></i></span>
+          <span class="theme-icon theme-icon-light"><i data-lucide="sun"></i></span>
+        </button>
+        <button class="nav-hamburger" id="menuToggle" aria-label="Abrir menú">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#bento" class="mobile-link">Inicio</a>
+      <a href="#projects" class="mobile-link">Proyectos</a>
+      <a href="#contact" class="mobile-link">Contacto</a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ═══════════════════════════════════════════
+         BENTO GRID — Main Dashboard
+         ═══════════════════════════════════════════ -->
+    <section class="bento-section" id="bento">
+      <div class="hero-bg-grid"></div>
+      <div class="hero-glow glow-1"></div>
+      <div class="hero-glow glow-2"></div>
+
+      <div class="bento-grid">
+
+        <!-- CARD: Hero / Intro — spans wide -->
+        <div class="bento-card card-hero reveal">
+          <p class="hero-eyebrow">
+            <span class="terminal-prompt">~/portfolio</span>
+            <span class="cursor-blink">▋</span>
+          </p>
+          <h1 class="hero-title">
+            Hola, soy<br/><span class="gradient-text">Tomas Flory</span>
+          </h1>
+          <p class="hero-subtitle" id="typewriter"></p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">
+              <i data-lucide="folder-open"></i> Ver proyectos
+            </a>
+            <a href="#contact" class="btn btn-ghost">
+              <i data-lucide="send"></i> Contacto
+            </a>
+          </div>
+        </div>
+
+        <!-- CARD: Live Status (original feature) -->
+        <div class="bento-card card-status reveal">
+          <div class="status-header">
+            <span class="status-dot"></span>
+            <span class="status-label">Estado actual</span>
+          </div>
+          <p class="status-activity" id="statusActivity">Programando...</p>
+          <p class="status-sub">Última actividad hace <span id="lastActive">0m</span></p>
+          <div class="status-stack">
+            <span class="stack-item" id="stackLang">Python</span>
+            <span class="stack-item" id="stackTool">VSCode</span>
+          </div>
+          <!-- Mini commit graph -->
+          <div class="commit-graph" id="commitGraph" title="Actividad semanal ficticia"></div>
+          <p class="graph-label">actividad esta semana</p>
+        </div>
+
+        <!-- CARD: About me -->
+        <div class="bento-card card-about reveal">
+          <div class="about-avatar">
+            <div class="avatar-ring">
+              <div class="avatar-initials">TF</div>
+            </div>
+            <div class="about-badge">
+              <i data-lucide="map-pin"></i> Buenos Aires
+            </div>
+          </div>
+          <div class="about-info">
+            <h2 class="about-name">Tomas Flory</h2>
+            <p class="about-role">Software Developer</p>
+            <p class="about-bio">
+              Desarrollador Web Full Stack.  
+            </p>
+            <a href="./media/CV_Tomas_Flory.pdf" class="btn btn-outline btn-sm">
+              <i data-lucide="file-text"></i> Descargar CV
+            </a>
+          </div>
+        </div>
+
+        <!-- CARD: Code snippet / about.json -->
+        <div class="bento-card card-code reveal">
+          <div class="code-window">
+            <div class="window-bar">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+              <span class="window-title">about.json</span>
+            </div>
+            <pre class="code-body"><code><span class="kw">{</span>
+  <span class="key">"disponible"</span>: <span class="bool">true</span><span class="dim">,</span>
+  <span class="key">"intereses"</span>: <span class="kw">[</span>
+    <span class="str">"Open Source"</span><span class="dim">,</span>
+    <span class="str">"Dev Tools"</span><span class="dim">,</span>
+    <span class="str">"Systems Design"</span>
+  <span class="kw">]</span><span class="dim">,</span>
+  <span class="key">"cafe_diario"</span>: <span class="num">3</span>
+<span class="kw">}</span></code></pre>
+          </div>
+        </div>
+
+        <!-- CARD: Skills — spans tall -->
+        <div class="bento-card card-skills reveal">
+          <h3 class="card-section-label">
+            <i data-lucide="zap"></i> Stack
+          </h3>
+          <div class="skills-list">
+            <div class="skill-row">
+              <span class="skill-name">Java</span>
+              <div class="skill-bar"><div class="skill-fill" style="--fill:100%"></div></div>
+            </div>
+            <div class="skill-row">
+              <span class="skill-name">JavaScript</span>
+              <div class="skill-bar"><div class="skill-fill" style="--fill:75%"></div></div>
+            </div>
+            <div class="skill-row">
+              <span class="skill-name">React</span>
+              <div class="skill-bar"><div class="skill-fill" style="--fill:75%"></div></div>
+            </div>
+            <div class="skill-row">
+              <span class="skill-name">Python</span>
+              <div class="skill-bar"><div class="skill-fill" style="--fill:50%"></div></div>
+            </div>
+            <div class="skill-row">
+              <span class="skill-name">Docker</span>
+              <div class="skill-bar"><div class="skill-fill" style="--fill:85%"></div></div>
+            </div>
+            <div class="skill-row">
+              <span class="skill-name">SQL</span>
+              <div class="skill-bar"><div class="skill-fill" style="--fill:100%"></div></div>
+            </div>
+          </div>
+          <div class="tools-row">
+            <span class="tag tag-sm">SpringBoot</span>
+            <span class="tag tag-sm">Linux</span>
+            <span class="tag tag-sm">Git</span>
+            <span class="tag tag-sm">Node.JS</span>
+          </div>
+        </div>
+
+        <!-- CARD: Quick stat blocks -->
+        <div class="bento-card card-stat reveal">
+          <i data-lucide="git-branch" class="stat-icon"></i>
+          <span class="stat-number" data-target="7">0</span>
+          <span class="stat-label">Repos públicos</span>
+        </div>
+
+        <div class="bento-card card-stat reveal">
+          <i data-lucide="coffee" class="stat-icon"></i>
+          <span class="stat-number" data-target="1247">0</span>
+          <span class="stat-label">Cafés tomados ☕</span>
+        </div>
+
+        <!-- CARD: GitHub link -->
+        <div class="bento-card card-github reveal">
+          <i data-lucide="github" class="github-icon"></i>
+          <p class="github-text">¿Querés ver todo el código?</p>
+          <a href="https://github.com/tomasflorydev" target="_blank" rel="noopener" class="btn btn-primary btn-full">
+            Ver GitHub <i data-lucide="arrow-right"></i>
+          </a>
+        </div>
+
+      </div><!-- /bento-grid -->
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         PROJECTS
+         ═══════════════════════════════════════════ -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-label reveal">
+          <span class="label-line"></span>
+          <span class="label-text">proyectos</span>
+          <span class="label-line"></span>
+        </div>
+        <h2 class="section-title text-center reveal">
+          Lo que estoy <span class="gradient-text">construyendo</span>
+        </h2>
+        <p class="section-desc text-center reveal">
+          Repositorios públicos en GitHub. Cada tarjeta apunta directo al repo.
+        </p>
+
+        <div class="projects-grid">
+
+          <!-- ╔══════════════════════════════╗ -->
+          <!-- ║  AÑADÍ TUS PROYECTOS AQUÍ   ║ -->
+          <!-- ╚══════════════════════════════╝ -->
+
+          <article class="project-card reveal">
+            <div class="card-header">
+              <div class="card-icon-wrap"><i data-lucide="folder-open"></i></div>
+              <div class="card-wip-badge">
+                <i data-lucide="construction"></i> En desarrollo
+              </div>
+            </div>
+            <h3 class="card-title">Repigy</h3>
+            <p class="card-desc">Gym companion desarrollado en Next.JS para desarrolladores. En proceso.</p>
+            <div class="card-tags">
+              <span class="tag tag-sm">JavaScript</span>
+              <span class="tag tag-sm">Next.JS</span>
+              <span class="tag tag-sm">SQLite</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="card-header">
+              <div class="card-icon-wrap"><i data-lucide="folder-open"></i></div>
+              <div class="card-wip-badge">
+                <i data-lucide="construction"></i> En desarrollo
+              </div>
+            </div>
+            <h3 class="card-title">Casa Cuomo</h3>
+            <p class="card-desc">E-commerce para importante vinoteca.</p>
+            <div class="card-tags">
+              <span class="tag tag-sm">Java</span>
+              <span class="tag tag-sm">SpringBoot</span>
+              <span class="tag tag-sm">React</span>
+              <span class="tag tag-sm">MySQL</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal coming-soon-card">
+            <div class="card-header">
+              <div class="card-icon-wrap"><i data-lucide="sparkles"></i></div>
+            </div>
+            <h3 class="card-title">Más proyectos próximamente...</h3>
+            <p class="card-desc">Siempre estoy construyendo algo nuevo. Seguime en GitHub.</p>
+            <a href="https://github.com/tomasflorydev" target="_blank" rel="noopener" class="btn btn-ghost" style="margin-top:auto;">
+              <i data-lucide="github"></i> @tomasflorydev
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         CONTACT
+         ═══════════════════════════════════════════ -->
+    <section class="section section-alt" id="contact">
+      <div class="container contact-container">
+        <div class="section-label reveal">
+          <span class="label-line"></span>
+          <span class="label-text">contacto</span>
+          <span class="label-line"></span>
+        </div>
+        <h2 class="section-title text-center reveal">
+          Hablemos <span class="gradient-text">✉</span>
+        </h2>
+        <p class="section-desc text-center reveal">
+          ¿Tenés una idea, querés colaborar, o simplemente saludar?
+          Mandame un mensaje y te respondo rápido.
+        </p>
+        <div class="contact-links reveal">
+          <a href="mailto:tomflory@hotmail.com" class="contact-pill">
+            <i data-lucide="mail"></i><span>tomflory@hotmail.com</span>
+          </a>
+          <a href="https://github.com/tomasflorydev" target="_blank" rel="noopener" class="contact-pill">
+            <i data-lucide="github"></i><span>GitHub</span>
+          </a>
+          <a href="https://linkedin.com/in/tomas-flory" target="_blank" rel="noopener" class="contact-pill">
+            <i data-lucide="linkedin"></i><span>LinkedIn</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="footer-text">
+        Hecho con <span class="heart">♥</span> y mucho ☕ por <span class="gradient-text">toms</span>
+      </p>
+      <p class="footer-sub">
+        Paleta:
+        <a href="https://github.com/catppuccin/catppuccin" target="_blank" rel="noopener" class="footer-link">Catppuccin</a>
+        — Mocha &amp; Latte
+      </p>
+    </div>
+  </footer>
+
+  <script src="./scripts/main.js"></script>
+</body>
+</html>
