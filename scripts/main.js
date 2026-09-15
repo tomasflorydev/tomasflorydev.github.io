@@ -124,10 +124,10 @@ document.querySelectorAll('.stat-number[data-target]').forEach(el => counterObs.
 /* ─── Live status ticker ───────────────────────────────────── */
 (function liveStatus() {
   const activities = [
-    { text: 'Programando...', lang: 'Python', tool: 'Neovim' },
-    { text: 'Depurando código...', lang: 'TypeScript', tool: 'VSCode' },
-    { text: 'Leyendo docs...', lang: 'Go', tool: 'Terminal' },
-    { text: 'Escribiendo tests...', lang: 'Python', tool: 'pytest' },
+    { text: 'Programando...', lang: 'Java', tool: 'VS Code' },
+    { text: 'Depurando código...', lang: 'JavaScript', tool: 'Terminal' },
+    { text: 'Leyendo docs...', lang: 'Java', tool: 'Terminal' },
+    { text: 'Escribiendo tests...', lang: 'JSON', tool: 'Insomnia' },
     { text: 'Revisando PRs...', lang: 'GitHub', tool: 'Browser' },
   ];
 
