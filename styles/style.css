@@ -897,6 +897,16 @@ button { cursor: pointer; border: none; background: transparent; font: inherit; 
 }
 .card-done-badge svg { width: 12px; height: 12px; }
 
+/* Light theme: stronger badge tints so they stay readable on a light background */
+[data-theme="light"] .card-wip-badge {
+  background: rgba(223,142,29,0.1);
+  border-color: rgba(223,142,29,0.35);
+}
+[data-theme="light"] .card-done-badge {
+  background: rgba(64,160,43,0.1);
+  border-color: rgba(64,160,43,0.35);
+}
+
 .card-title { font-size: 1.05rem; font-weight: 600; color: var(--ctp-text); }
 .card-desc { font-size: 0.88rem; color: var(--ctp-subtext0); line-height: 1.65; flex: 1; }
 .card-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.25rem; }
