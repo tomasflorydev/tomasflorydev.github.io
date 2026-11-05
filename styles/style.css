@@ -881,18 +881,21 @@ button { cursor: pointer; border: none; background: transparent; font: inherit; 
   border: 1px solid rgba(249,226,175,0.25);
 }
 .card-wip-badge svg { width: 12px; height: 12px; }
-.card-link {
-  color: var(--ctp-overlay2);
-  width: 34px; height: 34px;
-  display: grid; place-items: center;
-  border-radius: var(--radius-sm);
-  transition: color var(--duration) var(--ease), background var(--duration) var(--ease);
+
+.card-done-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.7rem;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--ctp-green);
+  background: rgba(166,227,161,0.1);
+  border: 1px solid rgba(166,227,161,0.25);
 }
-.card-link svg { width: 17px; height: 17px; }
-.card-link:hover {
-  color: var(--ctp-mauve);
-  background: rgba(136,57,239,0.1);
-}
+.card-done-badge svg { width: 12px; height: 12px; }
 
 .card-title { font-size: 1.05rem; font-weight: 600; color: var(--ctp-text); }
 .card-desc { font-size: 0.88rem; color: var(--ctp-subtext0); line-height: 1.65; flex: 1; }
